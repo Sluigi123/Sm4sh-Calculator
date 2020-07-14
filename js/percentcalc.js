@@ -542,7 +542,7 @@ app.controller('calculator', function ($scope) {
     };
 
     $scope.get_tumble = function(){
-        $scope.kb = 80.0001;
+        $scope.kb = 70.45454545;
         $scope.update();
     };
 
