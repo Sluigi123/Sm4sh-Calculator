@@ -25,35 +25,35 @@ function loadJSONPath(path) {
 }
 
 var defaultParameters = {
-    di: 0.17,
-    lsi_max: 1.095,
-    lsi_min: 0.92,
-    decay: 0.051,
+    di: 0.1745329252,
+    lsi_max: 1.07,
+    lsi_min: 0.94,
+    decay: 0.09,
     gravity: {
-        mult: 5,
-        constant: 0.075
+        mult: 4.33,
+        constant: 0.08715
     },
-    bounce: 0.8,
+    bounce: 0.85,
     crouch_cancelling: 0.85,
     crouch_hitlag: 0.67,
 	interrupted_smash: 1.2,
 	buried_kb_mult: 0.7,
 	buried_kb_threshold: 70,
-    hitstun: 0.4,
-    launch_speed: 0.03,
-    tumble_threshold: 32,
+    hitstun: 0.44,
+    launch_speed: 0.04,
+    tumble_threshold: 31,
     hitlag: {
         mult: 0.3846154,
         constant: 5
     },
     hitstunCancel: {
         frames: {
-            aerial: 45,
-            airdodge: 40
+            aerial: 50,
+            airdodge: 44
         },
         launchSpeed: {
-            aerial: 2,
-            airdodge: 2.5
+            aerial: 1.47,
+            airdodge: 1.84
         }
     },
     paralyzer: {
