@@ -1,33 +1,33 @@
 ﻿var parameters = {
-    di: 0.17,
-    lsi_max: 1.095,
-    lsi_min: 0.92,
-    decay: 0.051,
+    di: 0.1745329252,
+    lsi_max: 1.07,
+    lsi_min: 0.94,
+    decay: 0.09,
     gravity:{
-        mult: 5,
-        constant: 0.075
+        mult: 4.33,
+        constant: 0.08715
     },
-    bounce: 0.8,
+    bounce: 0.85,
     crouch_cancelling: 0.85,
     crouch_hitlag: 0.67,
-	interrupted_smash: 1.2,
+	interrupted_smash: 1.1,
 	buried_kb_mult: 0.7,
 	buried_kb_threshold: 70,
-    hitstun: 0.4,
-    launch_speed: 0.03,
-    tumble_threshold: 32,
+    hitstun: 0.44,
+    launch_speed: 0.04,
+    tumble_threshold: 31,
     hitlag: {
-        mult: 0.3846154,
-        constant: 5
+        mult: 0.65,
+        constant: 6
     },
     hitstunCancel: {
         frames: {
-            aerial: 45,
-            airdodge: 40
+            aerial: 50,
+            airdodge: 44
         },
         launchSpeed: {
-            aerial: 2,
-            airdodge: 2.5
+            aerial: 1.47,
+            airdodge: 1.84
         }
     },
     paralyzer: {
@@ -41,13 +41,13 @@ function TrainingKB(percent, base_damage, damage, weight, kbg, bkb, gravity, fal
 }
 
 function Rage(percent) {
-    if (percent <= 35) {
+    if (percent <= 75) {
         return 1;
     }
-    if (percent >= 150) {
-        return 1.15;
+    if (percent >= 200) {
+        return 1.12;
     }
-    return 1 + (percent - 35) * (1.15 - 1) / (150 - 35);
+    return 1 + (percent - 75) * (1.12 - 1) / (200 - 75);
 }
 
 function Aura(percent, stock_dif, game_format) {
@@ -135,7 +135,7 @@ function StaleNegation(queue, ignoreStale) {
     //if (timesInQueue == 0) {
     //    return 1.05;
     //}
-    var S = [0.08, 0.07594, 0.06782, 0.06028, 0.05274, 0.04462, 0.03766, 0.02954, 0.022];
+    var S = [0.08, 0.07, 0.065, 0.06, 0.055, 0.05, 0.045, 0.04, 0.035];
     var s = 1;
     for (var i = 0; i < queue.length; i++)
     {
@@ -144,7 +144,7 @@ function StaleNegation(queue, ignoreStale) {
         }
     }
     if (s == 1) {
-        return 1.05;
+        return 1.085;
     }
     return s;
 }
@@ -186,15 +186,15 @@ function LumaHitstun(kb, windbox, electric) {
 
 function SakuraiAngle(kb, aerial) {
     if (aerial) {
-        return (.79 * 180 / Math.PI);
+        return (.77 * 180 / Math.PI);
     }
-    if (kb < 60) {
+    if (kb < 40) {
         return 0;
     }
-    if (kb >= 88) {
-        return 40;
+    if (kb >= 180) {
+        return 42.5;
 	}
-	return Math.min((kb - 60) / (88 - 60) * 40 + 1, 40); //https://twitter.com/BenArthur_7/status/956316733597503488
+	return Math.min((-0.002168 * (kb - 180) ^ 2) + 42.5, 42.5); //https://twitter.com/BenArthur_7/status/956316733597503488
 }
 
 function VSKB(percent, base_damage, damage, weight, kbg, bkb, gravity, fall_speed, r, timesInQueue, ignoreStale, attacker_percent, angle, in_air, windbox, electric, set_weight, stick, dddinhale, launch_rate) {
