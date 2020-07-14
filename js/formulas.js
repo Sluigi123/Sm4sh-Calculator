@@ -290,9 +290,9 @@ function ChargeSmash(base_damage, frames, megaman_fsmash, witch_time) {
         return base_damage * (1 + (frames / 86));
     }
     if(witch_time){
-        return base_damage * (1 + (frames * 0.5 / 150));
+        return base_damage * (1 + (frames * 0.5 / 180));
     }
-    return base_damage * (1 + (frames / 150));
+    return base_damage * (1 + (frames / 180));
 }
 
 function ChargeSmashMultiplier(frames, megaman_fsmash, witch_time) {
@@ -300,15 +300,15 @@ function ChargeSmashMultiplier(frames, megaman_fsmash, witch_time) {
         return (1 + (frames / 86));
     }
     if(witch_time){
-        return (1 + (frames * 0.5 / 150));
+        return (1 + (frames * 0.5 / 180));
     }
-    return (1 + (frames / 150));
+    return (1 + (frames / 180));
 }
 
 function ShieldStun(damage, is_projectile, powershield) {
-	var projectileMult = is_projectile ? 0.5 : 1;
-	var powershieldMult = powershield ? 0.66 : 1;
-	return Math.floor((damage * 0.58 * projectileMult * powershieldMult) + 3) - 1;
+	var projectileMult = is_projectile ? 0.66 : 1;
+	var powershieldMult = powershield ? 0.5 : 1;
+	return Math.floor((damage * 1.2 * projectileMult * powershieldMult) + 3.14) - 1;
 }
 
 function ShieldHitlag(damage, hitlag, electric) {
@@ -330,13 +330,13 @@ function ShieldAdvantage(damage, hitlag, hitframe, FAF, is_projectile, electric,
 
 //Formula by Arthur https://twitter.com/BenArthur_7/status/926918804466225152
 function ShieldPushback(damage, projectile, powershield) {
-	var projectileMult = projectile ? 0.5 : 1;
-	var powershieldMult = powershield ? 0.66 : 1;
-	var powershieldMult2 = powershield ? 0.15 : 1;
+	var projectileMult = projectile ? 0.66 : 1;
+	var powershieldMult = powershield ? 0.5 : 1;
+	var powershieldMult2 = powershield ? 0.25 : 1;
 
-	var pushback = ((damage * 0.58 * projectileMult * powershieldMult) + 4) * 0.09 * powershieldMult2;
-	if (pushback > 1.3)
-		pushback = 1.3;
+	var pushback = ((damage * 1.2 * projectileMult * powershieldMult) + 3.14) * 0.1 * powershieldMult2;
+	if (pushback > 2.145)
+		pushback = 2.145;
 
 	return pushback;
 }
