@@ -1574,7 +1574,7 @@ class Distance{
         if(stage !== undefined){
             this.stage = stage;
 		}
-        if(kb >= 80 && angle != 0 && angle != 180){
+        if(kb >= 70.45454545 && angle != 0 && angle != 180){
             this.tumble = true;
         }
 
@@ -1944,14 +1944,14 @@ class Distance{
 					break;
 				} else {
 					if (this.y[i] + character_size >= this.stage.blast_zones[2]) {
-						if (this.vertical_speed[i] >= 2.4) { //If it has lower launch speed it will pass the blast zone without a KO
+						if (this.vertical_speed[i] >= 3.0) { //If it has lower launch speed it will pass the blast zone without a KO
 
 							this.extra.push(new Result("KO", "Frame " + i, "", false, true));
 							ko = true;
 							this.launchData.KOFrame = i;
 							break;
 						} else {
-							if (hitstun < (2.4 / 0.03) * 0.4) { //Hitstun frames is lower than 2.4 launch speed, this is used if the target is hit ON the blast zone
+							if (hitstun < (3.0 / 0.04) * 0.44) { //Hitstun frames is lower than 3.0 launch speed, this is used if the target is hit ON the blast zone
 
 								this.extra.push(new Result("KO", "Frame " + i, "", false, true));
 								ko = true;
@@ -1962,7 +1962,7 @@ class Distance{
 								if (!crossed) {
 									crossed = true;
 									this.extra.push(new Result("Vertical launch speed when crossing blast zone", this.vertical_speed[i], "", false, true));
-									this.extra.push(new Result("Required vertical launch speed to KO", "2.4", "", false, true));
+									this.extra.push(new Result("Required vertical launch speed to KO", "3.0", "", false, true));
 									this.extra.push(new Result("Frame crossing blast zone", "Frame " + i, "", false, true));
 								}
 							}
@@ -1984,7 +1984,7 @@ class Distance{
 				return;
 			}
 
-			if (this.kb >= 80)
+			if (this.kb >= 70.45454545)
 				this.diLines.push(new DILine(this.position.x, this.position.y, di % 360, false));
 			else
 				this.diLines.push(new DILine(this.position.x, this.position.y, -2, false));
@@ -2040,10 +2040,10 @@ class Knockback {
             }
             this.angle = this.base_angle;
             if (this.base_angle != 0 && this.base_angle != 180) {
-                this.tumble = this.kb >= 80 && !windbox;
+                this.tumble = this.kb >= 70.45454545 && !windbox;
             }
             if ((this.base_angle == 0 || this.base_angle == 180) && this.aerial) {
-                this.tumble = this.kb >= 80 && !windbox;
+                this.tumble = this.kb >= 70.45454545 && !windbox;
 			}
 
 			this.add_gravity_speed = parameters.gravity.mult * (this.gravity - parameters.gravity.constant);
@@ -2252,7 +2252,7 @@ class PercentFromKnockback{
                 this.hitstun = Hitstun(this.kb, this.windbox, this.electric);
 
                 if (this.base_angle != 0 && this.base_angle != 180) {
-                    this.tumble = this.kb >= 80 && !windbox;
+                    this.tumble = this.kb >= 70.45454545 && !windbox;
                     this.di_able = this.tumble;
                 }
 
@@ -2260,7 +2260,7 @@ class PercentFromKnockback{
                 /*if (this.angle == 0 || this.angle == 180  || (this.angle >= 181 && this.angle < 360)) {
                     this.add_gravity_kb = 0;
                 }*/
-                if (this.kb > 80 && (this.angle != 0 && this.angle != 180)) {
+                if (this.kb > 70.45454545 && (this.angle != 0 && this.angle != 180)) {
                     //this.y *= this.gravity_mult;
                     if (this.type == "y") {
                         this.kb = Math.abs(this.y / Math.sin(this.angle * Math.PI / 180));
@@ -2316,7 +2316,7 @@ class PercentFromKnockback{
                     this.training_percent = -1;
                 }
                 var rage = this.kb / this.wbkb_kb;
-                if (rage >= 1 && rage <= 1.15) {
+                if (rage >= 1 && rage <= 1.1) {
                     this.vs_percent = (5 / 3) * ((460 * rage) - 439);
                     this.vs_percent = +this.vs_percent.toFixed(6);
                     this.rage_needed = +rage.toFixed(6);
@@ -2378,9 +2378,9 @@ function getTitle(attribute) {
         { "attribute": "Damage dealt", "title": "Additional damage multiplier target receives caused by the attacker used in multiple powerups like Speed/Buster/Smash Monado Arts and Deep Breathing" },
         { "attribute": "Before launch damage", "title": "Throws can deal some damage during their animations like Pikachu's fthrow, this is added to the target percent before calculating KB" },
         { "attribute": "Stale-move negation", "title": "Damage reduction caused when using an attack repeatedly, if the attack isn't in the queue it gets a freshness bonus and increases damage a little" },
-        { "attribute": "Tumble", "title": "Target will enter tumble if KB > 80" },
-        { "attribute": "Reeling/Spin animation", "title": "Also called Untechable spin, special animation caused when KB > 80, angle isn't between 71 and 109 and target's percent is 100 or higher after the attack damage" },
-        { "attribute": "Can Jab lock", "title": "If target is in the ground after tumble during the bounce animation the attack can jab lock if Y = 0 or for spikes KB <= 80 and is grounded" },
+        { "attribute": "Tumble", "title": "Target will enter tumble if KB > 70.45454545" },
+        { "attribute": "Reeling/Spin animation", "title": "Also called Untechable spin, special animation caused when KB > 70.45454545, angle isn't between 71 and 109 and target's percent is 100 or higher after the attack damage" },
+        { "attribute": "Can Jab lock", "title": "If target is in the ground after tumble during the bounce animation the attack can jab lock if Y = 0 or for spikes KB <= 70.45454545 and is grounded" },
         { "attribute": "Angle with DI", "title": "Angle the target is launched affected by DI" },
         { "attribute": "Launch angle", "title": "Angle the target is launched with gravity boost" },
         { "attribute": "Luma KB", "title": "Luma KB is calculated with weight = 100 and an additional 15%" },
