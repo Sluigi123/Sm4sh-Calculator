@@ -345,7 +345,7 @@ function AttackerShieldPushback(damage, projectile = false) {
 	if (projectile)
 		return 0;
 
-	return (damage * 0.035) + 0.06;
+	return (damage * 0.06) + 0.035;
 }
 
 function DIAngleDeadzones(angle) {
