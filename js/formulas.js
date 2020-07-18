@@ -26,8 +26,8 @@
             airdodge: 44
         },
         launchSpeed: {
-            aerial: 1.47,
-            airdodge: 1.84
+            aerial: 1.0,
+            airdodge: 1.67
         }
     },
     paralyzer: {
