@@ -33,7 +33,7 @@ var defaultParameters = {
         mult: 4.33,
         constant: 0.08715
     },
-    bounce: 0.85,
+    bounce: 0.95,
     crouch_cancelling: 0.85,
     crouch_hitlag: 0.67,
 	interrupted_smash: 1.2,
