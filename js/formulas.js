@@ -1,33 +1,33 @@
 ﻿var parameters = {
-    di: 0.17,
-    lsi_max: 1.095,
-    lsi_min: 0.92,
-    decay: 0.051,
+    di: 0.1745329252,
+    lsi_max: 1.045,
+    lsi_min: 0.96,
+    decay: 0.09,
     gravity:{
-        mult: 5,
-        constant: 0.075
+        mult: 4.33,
+        constant: 0.0875
     },
     bounce: 0.8,
     crouch_cancelling: 0.85,
     crouch_hitlag: 0.67,
-	interrupted_smash: 1.2,
+	interrupted_smash: 1.1,
 	buried_kb_mult: 0.7,
 	buried_kb_threshold: 70,
-    hitstun: 0.4,
-    launch_speed: 0.03,
-    tumble_threshold: 32,
+    hitstun: 0.44,
+    launch_speed: 0.04,
+    tumble_threshold: 31,
     hitlag: {
-        mult: 0.3846154,
-        constant: 5
+        mult: 0.5,
+        constant: 6
     },
     hitstunCancel: {
         frames: {
-            aerial: 45,
-            airdodge: 40
+            aerial: 50,
+            airdodge: 44
         },
         launchSpeed: {
-            aerial: 2,
-            airdodge: 2.5
+            aerial: 0.6,
+            airdodge: 1.0
         }
     },
     paralyzer: {
@@ -41,13 +41,13 @@ function TrainingKB(percent, base_damage, damage, weight, kbg, bkb, gravity, fal
 }
 
 function Rage(percent) {
-    if (percent <= 35) {
+    if (percent <= 75) {
         return 1;
     }
-    if (percent >= 150) {
-        return 1.15;
+    if (percent >= 200) {
+        return 1.12;
     }
-    return 1 + (percent - 35) * (1.15 - 1) / (150 - 35);
+    return 1 + (percent - 75) * (1.12 - 1) / (200 - 75);
 }
 
 function Aura(percent, stock_dif, game_format) {
@@ -135,7 +135,7 @@ function StaleNegation(queue, ignoreStale) {
     //if (timesInQueue == 0) {
     //    return 1.05;
     //}
-    var S = [0.08, 0.07594, 0.06782, 0.06028, 0.05274, 0.04462, 0.03766, 0.02954, 0.022];
+    var S = [0.08, 0.07, 0.065, 0.06, 0.055, 0.05, 0.045, 0.04, 0.035];
     var s = 1;
     for (var i = 0; i < queue.length; i++)
     {
@@ -144,7 +144,7 @@ function StaleNegation(queue, ignoreStale) {
         }
     }
     if (s == 1) {
-        return 1.05;
+        return 1.0;
     }
     return s;
 }
@@ -186,15 +186,15 @@ function LumaHitstun(kb, windbox, electric) {
 
 function SakuraiAngle(kb, aerial) {
     if (aerial) {
-        return (.79 * 180 / Math.PI);
+        return (.77 * 180 / Math.PI);
     }
-    if (kb < 60) {
+    if (kb < 40) {
         return 0;
     }
-    if (kb >= 88) {
-        return 40;
+    if (kb >= 180) {
+        return 42.5;
 	}
-	return Math.min((kb - 60) / (88 - 60) * 40 + 1, 40); //https://twitter.com/BenArthur_7/status/956316733597503488
+	return Math.min(-0.0010842 * ((kb - 180) ** 2) + 42.5, 42.5); //https://twitter.com/BenArthur_7/status/956316733597503488
 }
 
 function VSKB(percent, base_damage, damage, weight, kbg, bkb, gravity, fall_speed, r, timesInQueue, ignoreStale, attacker_percent, angle, in_air, windbox, electric, set_weight, stick, dddinhale, launch_rate) {
@@ -287,28 +287,28 @@ function Hitlag(base_damage, hitlag_mult, electric, crouch) {
 
 function ChargeSmash(base_damage, frames, megaman_fsmash, witch_time) {
     if (megaman_fsmash) {
-        return base_damage * (1 + (frames / 86));
+        return base_damage * (1 + (frames / 103));
     }
     if(witch_time){
-        return base_damage * (1 + (frames * 0.5 / 150));
+        return base_damage * (1 + (frames * 0.5 / 180));
     }
-    return base_damage * (1 + (frames / 150));
+    return base_damage * (1 + (frames / 180));
 }
 
 function ChargeSmashMultiplier(frames, megaman_fsmash, witch_time) {
     if (megaman_fsmash) {
-        return (1 + (frames / 86));
+        return (1 + (frames / 103));
     }
     if(witch_time){
-        return (1 + (frames * 0.5 / 150));
+        return (1 + (frames * 0.5 / 180));
     }
-    return (1 + (frames / 150));
+    return (1 + (frames / 180));
 }
 
 function ShieldStun(damage, is_projectile, powershield) {
-	var projectileMult = is_projectile ? 0.5 : 1;
-	var powershieldMult = powershield ? 0.66 : 1;
-	return Math.floor((damage * 0.58 * projectileMult * powershieldMult) + 3) - 1;
+	var projectileMult = is_projectile ? 0.66 : 1;
+	var powershieldMult = powershield ? 0.5 : 1;
+	return Math.floor((damage * 1.28 * projectileMult * powershieldMult) + 3.14) - 1;
 }
 
 function ShieldHitlag(damage, hitlag, electric) {
@@ -332,11 +332,11 @@ function ShieldAdvantage(damage, hitlag, hitframe, FAF, is_projectile, electric,
 function ShieldPushback(damage, projectile, powershield) {
 	var projectileMult = projectile ? 0.5 : 1;
 	var powershieldMult = powershield ? 0.66 : 1;
-	var powershieldMult2 = powershield ? 0.15 : 1;
+	var powershieldMult2 = powershield ? 0.25 : 1;
 
-	var pushback = ((damage * 0.58 * projectileMult * powershieldMult) + 4) * 0.09 * powershieldMult2;
-	if (pushback > 1.3)
-		pushback = 1.3;
+	var pushback = ((damage * 1.28 * projectileMult * powershieldMult) + 3.14) * 0.1 * powershieldMult2;
+	if (pushback > 2.145)
+		pushback = 2.145;
 
 	return pushback;
 }
@@ -345,7 +345,7 @@ function AttackerShieldPushback(damage, projectile = false) {
 	if (projectile)
 		return 0;
 
-	return (damage * 0.04) + 0.025;
+	return (damage * 0.06) + 0.035;
 }
 
 function DIAngleDeadzones(angle) {

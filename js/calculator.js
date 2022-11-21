@@ -753,7 +753,7 @@ app.controller('calculator', function ($scope) {
 
         resultList.push(new Result("Tumble", trainingkb.tumble ? "Yes" : "No", vskb.tumble ? "Yes" : "No"));
 
-        resultList.push(new Result("Reeling/Spin animation", trainingkb.reeling ? "30%" : "0%", vskb.reeling ? "30%" : "0%", !trainingkb.reeling, !vskb.reeling));
+        resultList.push(new Result("Reeling/Spin animation", trainingkb.reeling ? "70%" : "0%", vskb.reeling ? "70%" : "0%", !trainingkb.reeling, !vskb.reeling));
         resultList.push(new Result("Reeling hitstun", trainingkb.reeling ? Hitstun(trainingkb.base_kb, windbox, electric, true) : Hitstun(trainingkb.base_kb, windbox, electric), vskb.reeling ? Hitstun(vskb.base_kb, windbox, electric, true) : Hitstun(vskb.base_kb, windbox, electric), !trainingkb.reeling, !vskb.reeling));
         resultList.push(new Result("Reeling FAF", FirstActionableFrame(trainingkb.base_kb, windbox, electric, true), FirstActionableFrame(vskb.base_kb, windbox, electric, true), !trainingkb.reeling, !vskb.reeling));
 
@@ -793,12 +793,12 @@ app.controller('calculator', function ($scope) {
 
 		if (!unblockable) {
 			var damageOnShield = base_damage * attacker.modifier.damage_dealt;
-			var s = (damageOnShield * 1.19) + (shieldDamage * 1.19);
-			var sv = (StaleDamage(damageOnShield, stale, ignoreStale) * 1.19) + (shieldDamage * 1.19);
+			var s = (damageOnShield * 1.08) + (shieldDamage * 1.08) + 1.5;
+			var sv = (StaleDamage(damageOnShield, stale, ignoreStale) * 1.08) + (shieldDamage * 1.08) + 1.5;
             if (!powershield) {
                 resultList.push(new Result("Shield Damage", +s.toFixed(6), +sv.toFixed(6)));
                 //resultList.push(new Result("Full HP shield", +(50 * target.modifier.shield).toFixed(6), +(50 * target.modifier.shield).toFixed(6)));
-				resultList.push(new Result("Shield Break", s >= 50 * target.modifier.shield ? "Yes" : "No", sv >= 50 * target.modifier.shield ? "Yes" : "No"));
+				resultList.push(new Result("Shield Break", s >= 55 * target.modifier.shield ? "Yes" : "No", sv >= 55 * target.modifier.shield ? "Yes" : "No"));
 			}
 			resultList.push(new Result("Shield Hitlag", ShieldHitlag(damageOnShield, hitlag, electric), ShieldHitlag(StaleDamage(damageOnShield, stale, ignoreStale), hitlag, electric)));
 			resultList.push(new Result("Shield stun", ShieldStun(damageOnShield, is_projectile, powershield), ShieldStun(StaleDamage(damageOnShield, stale, ignoreStale), is_projectile, powershield)));            
@@ -808,7 +808,7 @@ app.controller('calculator', function ($scope) {
 				if (!is_projectile)
 					resultList.push(new Result("Attacker shield pushback", +AttackerShieldPushback(damageOnShield).toFixed(6), +AttackerShieldPushback(StaleDamage(damageOnShield, stale, ignoreStale)).toFixed(6)));
 
-				resultList.push(new Result("Target shield pushback", +(ShieldPushback(damageOnShield, is_projectile, powershield)).toFixed(6), +(ShieldPushback(StaleDamage(damageOnShield, stale, ignoreStale), is_projectile, powershield)).toFixed(6), s >= 50 * target.modifier.shield, sv >= 50 * target.modifier.shield));
+				resultList.push(new Result("Target shield pushback", +(ShieldPushback(damageOnShield, is_projectile, powershield)).toFixed(6), +(ShieldPushback(StaleDamage(damageOnShield, stale, ignoreStale), is_projectile, powershield)).toFixed(6), s >= 55 * target.modifier.shield, sv >= 55 * target.modifier.shield));
 			}
         } else {
             resultList.push(new Result("Unblockable attack", "Yes", "Yes"));
