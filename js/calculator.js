@@ -797,8 +797,8 @@ app.controller('calculator', function ($scope) {
 			var sv = (StaleDamage(damageOnShield, stale, ignoreStale) * 1.08) + (shieldDamage * 1.08) + 1.5;
             if (!powershield) {
                 resultList.push(new Result("Shield Damage", +s.toFixed(6), +sv.toFixed(6)));
-                //resultList.push(new Result("Full HP shield", +(50 * target.modifier.shield).toFixed(6), +(50 * target.modifier.shield).toFixed(6)));
-				resultList.push(new Result("Shield Break", s >= 55 * target.modifier.shield ? "Yes" : "No", sv >= 55 * target.modifier.shield ? "Yes" : "No"));
+                //resultList.push(new Result("Full HP shield", +(60 * target.modifier.shield).toFixed(6), +(60 * target.modifier.shield).toFixed(6)));
+				resultList.push(new Result("Shield Break", s >= 60 * target.modifier.shield ? "Yes" : "No", sv >= 60 * target.modifier.shield ? "Yes" : "No"));
 			}
 			resultList.push(new Result("Shield Hitlag", ShieldHitlag(damageOnShield, hitlag, electric), ShieldHitlag(StaleDamage(damageOnShield, stale, ignoreStale), hitlag, electric)));
 			resultList.push(new Result("Shield stun", ShieldStun(damageOnShield, is_projectile, powershield), ShieldStun(StaleDamage(damageOnShield, stale, ignoreStale), is_projectile, powershield)));            
