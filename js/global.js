@@ -2162,8 +2162,8 @@ class PercentFromKnockback{
         this.tumble = false;
         this.can_jablock = false;
         this.di_able = false;
-        this.add_gravity_speed = 5 * (this.gravity - 0.075);
-        this.add_gravity_kb = this.add_gravity_speed / 0.03;
+        this.add_gravity_speed = 4.33 * (this.gravity - 0.0875);
+        this.add_gravity_kb = this.add_gravity_speed / 0.04;
         this.reeling = false;
         this.training_percent = 0;
         this.vs_percent = 0;
@@ -2214,7 +2214,7 @@ class PercentFromKnockback{
                 if (this.original_angle == 361 && !this.aerial && type != "total") {
                     //Find the original kb and get the angle
                     var angle_found = false;
-                    for (var temp_kb = 70.449999; temp_kb < 180; temp_kb += 0.001) {
+                    for (var temp_kb = 70.454544; temp_kb < 180; temp_kb += 0.001) {
                         var temp_angle = SakuraiAngle(temp_kb, this.aerial);
                         var temp_var = 0;
                         if (this.type == "x") {
@@ -2279,7 +2279,7 @@ class PercentFromKnockback{
                     }
                 }
                 if (this.angle <= 70 || this.angle >= 110) {
-                    this.reeling = this.tumble && !this.windbox && this.percent >= 100;
+                    this.reeling = this.tumble && !this.windbox && this.percent >= 135;
 
                 }
 
@@ -2379,8 +2379,8 @@ function getTitle(attribute) {
         { "attribute": "Before launch damage", "title": "Throws can deal some damage during their animations like Pikachu's fthrow, this is added to the target percent before calculating KB" },
         { "attribute": "Stale-move negation", "title": "Damage reduction caused when using an attack repeatedly, if the attack isn't in the queue it gets a freshness bonus and increases damage a little" },
         { "attribute": "Tumble", "title": "Target will enter tumble if KB > 70.454545" },
-        { "attribute": "Reeling/Spin animation", "title": "Also called Untechable spin, special animation caused when KB > 70.454545, angle isn't between 71 and 109 and target's percent is 100 or higher after the attack damage" },
-        { "attribute": "Can Jab lock", "title": "If target is in the ground after tumble during the bounce animation the attack can jab lock if Y = 0 or for spikes KB <= 80 and is grounded" },
+        { "attribute": "Reeling/Spin animation", "title": "Also called Untechable spin, special animation caused when KB > 70.454545, angle isn't between 71 and 109 and target's percent is 135 or higher after the attack damage" },
+        { "attribute": "Can Jab lock", "title": "If target is in the ground after tumble during the bounce animation the attack can jab lock if Y = 0 or for spikes KB <= 70.454545 and is grounded" },
         { "attribute": "Angle with DI", "title": "Angle the target is launched affected by DI" },
         { "attribute": "Launch angle", "title": "Angle the target is launched with gravity boost" },
         { "attribute": "Luma KB", "title": "Luma KB is calculated with weight = 100 and an additional 15%" },
