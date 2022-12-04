@@ -330,13 +330,13 @@ function ShieldAdvantage(damage, hitlag, hitframe, FAF, is_projectile, electric,
 
 //Formula by Arthur https://twitter.com/BenArthur_7/status/926918804466225152
 function ShieldPushback(damage, projectile, powershield) {
-	var projectileMult = projectile ? 0.5 : 1;
-	var powershieldMult = powershield ? 0.66 : 1;
-	var powershieldMult2 = powershield ? 0.25 : 1;
+	var projectileMult = projectile ? 0.66 : 1;
+	var powershieldMult = powershield ? 0.5 : 1;
+	var powershieldMult2 = powershield ? 0.2 : 1;
 
-	var pushback = ((damage * 1.28 * projectileMult * powershieldMult) + 3.14) * 0.05 * powershieldMult2;
-	if (pushback > 2.145)
-		pushback = 2.145;
+	var pushback = (Math.floor((damage * 1.28 * projectileMult * powershieldMult) + 3.14) - 1) * 0.05 * powershieldMult2;
+	if (pushback > 2.0)
+		pushback = 2.0;
 
 	return pushback;
 }
