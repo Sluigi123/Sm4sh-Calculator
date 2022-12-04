@@ -334,7 +334,7 @@ function ShieldPushback(damage, projectile, powershield) {
 	var powershieldMult = powershield ? 0.66 : 1;
 	var powershieldMult2 = powershield ? 0.25 : 1;
 
-	var pushback = ((damage * 1.28 * projectileMult * powershieldMult) + 3.14) * 0.1 * powershieldMult2;
+	var pushback = ((damage * 1.28 * projectileMult * powershieldMult) + 3.14) * 0.05 * powershieldMult2;
 	if (pushback > 2.145)
 		pushback = 2.145;
 
@@ -345,7 +345,7 @@ function AttackerShieldPushback(damage, projectile = false) {
 	if (projectile)
 		return 0;
 
-	return (damage * 0.06) + 0.035;
+	return ((damage * 0.03) + 0.06) * 1.04;
 }
 
 function DIAngleDeadzones(angle) {
