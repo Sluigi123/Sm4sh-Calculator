@@ -33,7 +33,7 @@ var defaultParameters = {
         mult: 4.33,
         constant: 0.0875
     },
-    bounce: 0.85,
+    bounce: 0.9,
     crouch_cancelling: 0.85,
     crouch_hitlag: 0.67,
 	interrupted_smash: 1.1,
@@ -1289,8 +1289,8 @@ class Collision {
 				}
 				//Calculate bounced off angle
 				var rAngle = (2 * (material.passthroughAngle)) - 180 - launch_angle;
-				launch_speed.x = Math.abs(launch_speed.x * 0.8);
-				launch_speed.y = Math.abs(launch_speed.y * 0.8);
+				launch_speed.x = Math.abs(launch_speed.x * 0.9);
+				launch_speed.y = Math.abs(launch_speed.y * 0.9);
 				if (Math.cos(rAngle * Math.PI / 180) < 0) {
 					launch_speed.x *= -1;
 				}
@@ -1436,8 +1436,8 @@ class Collision {
 				}
 				//Calculate bounced off angle
 				var rAngle = (2 * (material.passthroughAngle)) - 180 - launch_angle;
-				launch_speed.x = Math.abs(launch_speed.x * 0.8);
-				launch_speed.y = Math.abs(launch_speed.y * 0.8);
+				launch_speed.x = Math.abs(launch_speed.x * 0.9);
+				launch_speed.y = Math.abs(launch_speed.y * 0.9);
 				if (Math.cos(rAngle * Math.PI / 180) < 0) {
 					launch_speed.x *= -1;
 				}
@@ -2339,7 +2339,7 @@ class PercentFromKnockback{
         };
         this.bounce = function (bounce) {
             if (bounce) {
-                //this.kb /= 0.8;
+                //this.kb /= 0.9;
                 this.calculate();
             }
         }
@@ -2458,7 +2458,7 @@ function KBModifier(value) {
         case "crouch":
             return parameters.crouch_cancelling;
         case "grounded":
-            return 1; //0.8 applied after hitstun
+            return 1; //0.9 applied after hitstun
         case "charging":
 			return parameters.interrupted_smash;
 		case "buried":
