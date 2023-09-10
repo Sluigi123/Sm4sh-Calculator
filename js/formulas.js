@@ -7,7 +7,7 @@
         mult: 4.33,
         constant: 0.0875
     },
-    bounce: 0.8,
+    bounce: 0.9,
     crouch_cancelling: 0.85,
     crouch_hitlag: 0.67,
 	interrupted_smash: 1.1,
