@@ -1289,8 +1289,8 @@ class Collision {
 				}
 				//Calculate bounced off angle
 				var rAngle = (2 * (material.passthroughAngle)) - 180 - launch_angle;
-				launch_speed.x = Math.abs(launch_speed.x * 0.85);
-				launch_speed.y = Math.abs(launch_speed.y * 0.85);
+				launch_speed.x = Math.abs(launch_speed.x * 0.9);
+				launch_speed.y = Math.abs(launch_speed.y * 0.9);
 				if (Math.cos(rAngle * Math.PI / 180) < 0) {
 					launch_speed.x *= -1;
 				}
@@ -1436,8 +1436,8 @@ class Collision {
 				}
 				//Calculate bounced off angle
 				var rAngle = (2 * (material.passthroughAngle)) - 180 - launch_angle;
-				launch_speed.x = Math.abs(launch_speed.x * 0.85);
-				launch_speed.y = Math.abs(launch_speed.y * 0.85);
+				launch_speed.x = Math.abs(launch_speed.x * 0.9);
+				launch_speed.y = Math.abs(launch_speed.y * 0.9);
 				if (Math.cos(rAngle * Math.PI / 180) < 0) {
 					launch_speed.x *= -1;
 				}
