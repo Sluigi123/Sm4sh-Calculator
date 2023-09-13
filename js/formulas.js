@@ -144,7 +144,7 @@ function StaleNegation(queue, ignoreStale) {
         }
     }
     if (s == 1) {
-        return 1.0;
+        return 1.067;
     }
     return s;
 }
