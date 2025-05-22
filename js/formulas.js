@@ -17,8 +17,8 @@
     launch_speed: 0.04,
     tumble_threshold: 31,
     hitlag: {
-        mult: 0.5,
-        constant: 6
+        mult: 0.4,
+        constant: 4
     },
     hitstunCancel: {
         frames: {
