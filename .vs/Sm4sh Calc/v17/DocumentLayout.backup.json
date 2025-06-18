@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Zelda\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Zelda\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Kirby\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Kirby\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\formulas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -18,11 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "attributes.json",
+              "DocumentMoniker": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Zelda\\attributes.json",
+              "RelativeDocumentMoniker": "Data\\Zelda\\attributes.json",
+              "ToolTip": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Zelda\\attributes.json",
+              "RelativeToolTip": "Data\\Zelda\\attributes.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAgAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-04T16:27:47.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "attributes.json",
+              "DocumentMoniker": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Kirby\\attributes.json",
+              "RelativeDocumentMoniker": "Data\\Kirby\\attributes.json",
+              "ToolTip": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Kirby\\attributes.json",
+              "RelativeToolTip": "Data\\Kirby\\attributes.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-02T00:52:16.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "global.js",
               "DocumentMoniker": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\global.js",
               "RelativeDocumentMoniker": "js\\global.js",
@@ -30,12 +64,11 @@
               "RelativeToolTip": "js\\global.js",
               "ViewState": "AgIAANMBAAAAAAAAAAAAwC4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-22T06:27:29.315Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T06:27:29.315Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "formulas.js",
               "DocumentMoniker": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js",
               "RelativeDocumentMoniker": "js\\formulas.js",
