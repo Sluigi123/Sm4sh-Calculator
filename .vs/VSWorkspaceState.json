@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Data"
+    "\\Data",
+    "\\Data\\Zelda"
   ],
-  "SelectedNode": "\\Data\\Olimar",
+  "SelectedNode": "\\Data\\Zelda\\attributes.json",
   "PreviewInSolutionExplorer": false
 }
