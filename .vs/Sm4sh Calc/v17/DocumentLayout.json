@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\",
+  "WorkspaceRootPath": "D:\\Game Dev Folder\\Sm4sh Calc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Diddy Kong\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Diddy Kong\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Game Dev Folder\\Sm4sh Calc\\Data\\Bowser\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Bowser\\attributes.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\global.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Game Dev Folder\\Sm4sh Calc\\js\\global.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\global.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\formulas.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
@@ -36,22 +36,22 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "attributes.json",
-              "DocumentMoniker": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Diddy Kong\\attributes.json",
-              "RelativeDocumentMoniker": "Data\\Diddy Kong\\attributes.json",
-              "ToolTip": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\Data\\Diddy Kong\\attributes.json",
-              "RelativeToolTip": "Data\\Diddy Kong\\attributes.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACnAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Game Dev Folder\\Sm4sh Calc\\Data\\Bowser\\attributes.json",
+              "RelativeDocumentMoniker": "Data\\Bowser\\attributes.json",
+              "ToolTip": "D:\\Game Dev Folder\\Sm4sh Calc\\Data\\Bowser\\attributes.json",
+              "RelativeToolTip": "Data\\Bowser\\attributes.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAD+AQAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-18T06:15:14.117Z",
+              "WhenOpened": "2025-07-21T23:19:07.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "global.js",
-              "DocumentMoniker": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\global.js",
+              "DocumentMoniker": "D:\\Game Dev Folder\\Sm4sh Calc\\js\\global.js",
               "RelativeDocumentMoniker": "js\\global.js",
-              "ToolTip": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\global.js",
+              "ToolTip": "D:\\Game Dev Folder\\Sm4sh Calc\\js\\global.js",
               "RelativeToolTip": "js\\global.js",
               "ViewState": "AgIAANMBAAAAAAAAAAAAwC4AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -61,9 +61,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "formulas.js",
-              "DocumentMoniker": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js",
+              "DocumentMoniker": "D:\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js",
               "RelativeDocumentMoniker": "js\\formulas.js",
-              "ToolTip": "C:\\Users\\frett\\OneDrive\\Desktop\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js",
+              "ToolTip": "D:\\Game Dev Folder\\Sm4sh Calc\\js\\formulas.js",
               "RelativeToolTip": "js\\formulas.js",
               "ViewState": "AgIAAOEBAAAAAAAAAAApwMsBAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
