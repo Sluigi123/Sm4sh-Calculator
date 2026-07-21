@@ -2035,6 +2035,9 @@ class Knockback {
         }
         this.calculate = function () {
             this.kb = this.base_kb * this.launch_rate;
+            if (this.original_angle == 0) {
+                this.base_angle = ZeroAngle(this.kb, this.aerial)
+            }
             if (this.original_angle == 361) {
                 this.base_angle = SakuraiAngle(this.kb, this.aerial);
             }
@@ -2206,6 +2209,9 @@ class PercentFromKnockback{
             this.calculate = function () {
 
 
+                if (this.original_angle == 0) {
+                    this.base_angle = ZeroAngle(this.kb, this.aerial)
+                }
                 if (this.original_angle == 361) {
                     this.base_angle = SakuraiAngle(this.kb, this.aerial);
                 }

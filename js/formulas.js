@@ -184,6 +184,19 @@ function LumaHitstun(kb, windbox, electric) {
 	return hitstun;
 }
 
+function ZeroAngle(kb, aerial) {
+	if (aerial) {
+		return (.25 * 180 / Math.PI);
+	}
+	if (kb < 88) {
+		return 0;
+	}
+	if (kb >= 198) {
+		return 28;
+	}
+	return Math.min(-0.0012231405 * ((kb - 198) ** 2) + 28, 28);
+}
+
 function SakuraiAngle(kb, aerial) {
     if (aerial) {
         return (.77 * 180 / Math.PI);
